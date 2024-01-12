@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './select-content.component.css'
 })
 export class SelectContentComponent {
-
+ isInterest:boolean = false;
+ viewInterests(){
+  this.isInterest = true;
+ }
 }
