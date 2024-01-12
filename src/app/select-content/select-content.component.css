@@ -1,0 +1,14 @@
+.container {
+    width: 480px;
+    margin: 0 auto;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+.container div {
+    margin-bottom: 60px;
+}
+p{
+    width: 190px;
+}

@@ -1,0 +1,23 @@
+.select-card {
+    display: flex;
+    width: 232px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 8px;
+    border-radius: 100px;
+    color: #fff;
+}
+.select-card h4 {
+    font-weight: 400;
+}
+.not-selected {
+    display: flex;
+    width: 232px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 8px;
+    border-radius: 100px;
+    color: #000; 
+}

@@ -1,0 +1,15 @@
+<div class="main-container">
+    <app-banner [bannerImage]="">
+    </app-banner>
+    <div class="container">
+        <app-step [index]="1"></app-step>
+        <div class="login-container">
+            <app-input label="name" type="text" placeholder="john doe"></app-input>
+            <app-input label="E-mail" type="text" placeholder="doe@gmail.com"></app-input>
+            <app-input label="password" type="password" placeholder="******"></app-input>
+            <app-button text="Create account" routerLink="/add-photo"></app-button>
+            <button><img src="../../assets/icons/google-icon.svg" alt=""> sign up with google</button>
+            <p>Already have an account? <a routerLink="#">Log in</a></p>
+        </div>
+    </div>
+</div>

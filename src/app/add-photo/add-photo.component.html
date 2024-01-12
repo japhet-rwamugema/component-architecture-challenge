@@ -1,0 +1,29 @@
+<div class="main-container">
+    <app-banner></app-banner>
+    <div >
+        <app-step [index]="2"></app-step>
+        <div class="add-photo-container" *ngIf="!onUploadPhoto;else uploadPhoto">
+            <div>
+                <h2>Add photo</h2>
+                <p>Add a photo so other members know who you are</p>
+                <div class="img-container"><img src="../../assets/icons/avatar.svg" alt=""></div>
+            </div>
+            <div class="btn">
+                <app-button text="Upload photo" (onClickEvent)="upload()"></app-button>
+                <app-button text="Skip" routerLink="/select"></app-button>
+            </div>
+        </div>
+        <ng-template #uploadPhoto> 
+            <div class="add-photo-container">
+                <div>
+                    <h2>Add photo</h2>
+                    <p>Add a photo so other members know who you are</p>
+                    <div class="img-container"><img src="../../assets/icons/profile.svg" alt="" routerLink="/select"></div>
+                </div>
+                <div class="btn">
+                    <app-button text="Continue"></app-button>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
