@@ -13,6 +13,7 @@ import { StepComponent } from './step/step.component';
 import { AddPhotoComponent } from './add-photo/add-photo.component';
 import { SelectContentComponent } from './select-content/select-content.component';
 import { CompleteComponent } from './complete/complete.component';
+import { componentReducer } from './store';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { CompleteComponent } from './complete/complete.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({app: componentReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
