@@ -1,8 +1,13 @@
 <div class="main-container">
-    <app-banner></app-banner>
+    <app-banner bannerImage="../../assets/icons/image.svg"></app-banner>
     <div>
-        <app-step [index]="3"></app-step>
-        @if (!isInterest) {
+        <ng-container *ngIf="!isInterest; else interests">
+            <app-step [index]="3"></app-step>
+        </ng-container>
+        <ng-template #interests>
+            <app-step [index]="4"></app-step>
+        </ng-template>
+            @if (!isInterest) {
             <div class="container">
                 <h1>Hey there! What brings you here?</h1>
                 <p>This will help us make  great recommendations</p>
@@ -18,13 +23,25 @@
             <div class="container">
                 <h1>Let’s get started by picking some interests</h1>
                 <p>Alright, let's pick something we're interested in and get started!</p>
-                <div>
-                    <app-card cardTitle="Social interactions" cardClass="select-card" cardIcon="../../assets/icons/plus.svg" cardBackgroundColor="#0267FF"></app-card>
-                    <app-card cardTitle="Personal development" cardClass="not-selected" cardIcon="../../assets/icons/plus-dark.svg" cardBackgroundColor="transparent" cardBorderColor="1px solid gray"></app-card>
-                    <app-card cardTitle="Entertainment and fun" cardClass="not-selected" cardIcon="../../assets/icons/plus-dark.svg" cardBorderColor="1px solid gray"></app-card>
-                    <app-card cardTitle="Rewards and recognition" cardClass="not-selected" cardIcon="../../assets/icons/plus-dark.svg" cardBorderColor="1px solid gray"></app-card>
+                <div class="card-container">
+                    <div class="card">
+                       <h1>Gaming</h1>
+                       <button>Added <img src="../../assets/icons/add-icon.svg" alt=""></button>
+                    </div>
+                    <div class="fashion-card">
+                       <h1>Fashion</h1>
+                       <button>Add</button>
+                    </div>
+                    <div class="music-card">
+                        <h1>Music</h1>
+                        <button>Add</button>
+                    </div>
+                    <div class="reading-card">
+                        <h1>Reading</h1>
+                        <button>Add</button>
+                    </div>
                 </div>
-                <app-button text="Continue" (onClickEvent)="viewInterests()"></app-button>
+                <app-button text="Continue" routerLink="/last-page"></app-button>
             </div>
         }
     </div>

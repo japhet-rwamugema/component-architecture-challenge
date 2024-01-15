@@ -1,5 +1,5 @@
 <div class="main-container">
-    <app-banner></app-banner>
+    <app-banner bannerImage="../../assets/icons/image.svg"></app-banner>
     <div >
         <app-step [index]="2"></app-step>
         <div class="add-photo-container" *ngIf="!onUploadPhoto;else uploadPhoto">
@@ -10,7 +10,7 @@
             </div>
             <div class="btn">
                 <app-button text="Upload photo" (onClickEvent)="upload()"></app-button>
-                <app-button text="Skip" routerLink="/select"></app-button>
+                <a routerLink="/select">skip</a>
             </div>
         </div>
         <ng-template #uploadPhoto> 

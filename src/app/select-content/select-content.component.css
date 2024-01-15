@@ -12,3 +12,108 @@
 p{
     width: 190px;
 }
+.card-container{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 172px;
+    height: 168px;
+    border-radius: 8px;
+    opacity: 0.4;
+    background: #DF9BE0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.fashion-card{
+    width: 172px;
+    height: 168px;
+    border-radius: 8px;
+    opacity: 0.4;
+    background: #CCFFCC;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.music-card{
+    width: 172px;
+    height: 168px;
+    border-radius: 8px;
+    opacity: 0.4;
+    background: #FFC299;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.reading-card{
+    width: 172px;
+    height: 168px;
+    border-radius: 8px;
+    opacity: 0.4;
+    background: #2575D1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.card h1{
+color: #1D2939;
+font-family: Inter;
+font-size: 23.04px;
+font-weight: 600;
+letter-spacing: 0.115px;
+}
+.card button{
+display: inline-flex;
+height: 36px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 4px;
+border: 1px solid gray;
+background-color: transparent;
+}
+.fashion-card button {
+    display: inline-flex;
+height: 36px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 4px;
+border: 1px solid gray;
+background-color: transparent;
+}
+.music-card button {
+    display: inline-flex;
+height: 36px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 4px;
+border: 1px solid gray;
+background-color: transparent;
+}
+.reading-card button {
+    display: inline-flex;
+height: 36px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 4px;
+border: 1px solid #b3b3b3;
+background-color: transparent;
+}
+.music-card button{
+    display: inline-flex;
+height: 36px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 4px;
+border: 1px solid gray;
+background-color: transparent;
+}

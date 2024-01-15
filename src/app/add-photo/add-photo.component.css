@@ -27,3 +27,11 @@ font-weight: 600;
 line-height: normal;
 letter-spacing: 0.166px;
 }
+a {
+    text-align: center;
+    text-decoration: none;
+    color: #1D2939;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize;
+}

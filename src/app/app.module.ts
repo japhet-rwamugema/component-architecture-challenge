@@ -12,6 +12,7 @@ import { InputComponent } from './input/input.component';
 import { StepComponent } from './step/step.component';
 import { AddPhotoComponent } from './add-photo/add-photo.component';
 import { SelectContentComponent } from './select-content/select-content.component';
+import { CompleteComponent } from './complete/complete.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SelectContentComponent } from './select-content/select-content.componen
     InputComponent,
     StepComponent,
     AddPhotoComponent,
-    SelectContentComponent
+    SelectContentComponent,
+    CompleteComponent
   ],
   imports: [
     BrowserModule,
