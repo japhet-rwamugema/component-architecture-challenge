@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigateService } from '../navigate.service';
+import { NavigateService } from '../../services/navigate.service';
 
 @Component({
   selector: 'app-add-photo',

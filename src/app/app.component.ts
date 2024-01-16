@@ -1,11 +1,11 @@
 import { Component, Directive, ViewChild, ViewContainerRef } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { setPage } from './actions';
-import { initialState } from './store';
-import { LoginComponent } from './login/login.component';
-import { SelectContentComponent } from './select-content/select-content.component';
-import { CompleteComponent } from './complete/complete.component';
-import { AddPhotoComponent } from './add-photo/add-photo.component';
+import { setPage } from './store/actions';
+import { initialState } from './store/store';
+import { LoginComponent } from './components/login/login.component';
+import { SelectContentComponent } from './components/select-content/select-content.component';
+import { CompleteComponent } from './components/complete/complete.component';
+import { AddPhotoComponent } from './components/add-photo/add-photo.component';
 
 export  interface AppState {
   app:initialState

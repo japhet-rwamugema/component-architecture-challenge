@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { NavigateService } from '../navigate.service';
+import { Component } from '@angular/core';
+import { NavigateService } from '../../services/navigate.service';
 
 @Component({
   selector: 'app-login',
