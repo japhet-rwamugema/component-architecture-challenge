@@ -1,6 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { LoginComponent } from "./login/login.component";
-import { getPage, setPage } from "./actions";
+import { setPage } from "./actions";
 
 export interface initialState {
   page: number;
@@ -8,10 +7,8 @@ export interface initialState {
 const initialState:initialState = {
    page: 0,
 }
-export const componentReducer = createReducer(initialState, on(getPage, (state)=>({
-    ...state, 
-    page: state.page - 1
-})),
+export const componentReducer = createReducer(
+  initialState,
 on(setPage, (state)=>({
     ...state,
      page: state.page + 1

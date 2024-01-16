@@ -1,6 +1,6 @@
-import { Component, Directive, Input, Type, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Directive, ViewChild, ViewContainerRef } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { getPage, setPage } from './actions';
+import { setPage } from './actions';
 import { initialState } from './store';
 import { LoginComponent } from './login/login.component';
 import { SelectContentComponent } from './select-content/select-content.component';
@@ -31,6 +31,7 @@ components = [AddPhotoComponent,SelectContentComponent, CompleteComponent ]
 constructor(private store: Store<AppState>){}
 
 ngOnInit(){
+  //create login component as the entry component
   const component = this.appDynamicComponent.createComponent(LoginComponent)
   component.instance.navigateTo = this.navigate.bind(this)
   this.store.select(state => state.app.page).subscribe(page =>{
@@ -38,12 +39,14 @@ ngOnInit(){
   }) 
 }
 navigate(){
+  // update page state and create the component
   this.store.dispatch(setPage())
   if (this.pages>=0 && this.pages < this.components.length + 1) {
-    this.pages,this.createComponent()
+    this.createComponent()
    }
 }
 createComponent(){
+  //create component when the page is equal to the component index
   const pageIndex = this.pages - 1
   this.appDynamicComponent.clear()
    const component = this.appDynamicComponent.createComponent(this.components[pageIndex])
