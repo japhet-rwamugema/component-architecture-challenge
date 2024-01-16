@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './complete.component.css'
 })
 export class CompleteComponent {
-
+navigateTo(){}
 }

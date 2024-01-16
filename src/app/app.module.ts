@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, DynamicComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
@@ -26,8 +26,10 @@ import { componentReducer } from './store';
     StepComponent,
     AddPhotoComponent,
     SelectContentComponent,
-    CompleteComponent
-  ],
+    CompleteComponent,
+    DynamicComponent
+    ]
+,
   imports: [
     BrowserModule,
     AppRoutingModule,

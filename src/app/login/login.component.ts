@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../app.component';
 import { getPage, setPage } from '../actions';
+import { NavigateService } from '../navigate.service';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +10,9 @@ import { getPage, setPage } from '../actions';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  pages$ = this.store.select(state => state.app.page)
-
-  constructor(private store: Store<AppState>){}
-  navigateToNextPage(){
-    this.store.dispatch(setPage())
-   this.pages$.subscribe(state=>{
-    console.log(state);
-    
-   })
-   
+//  @Output() navigate:EventEmitter<any>  = new EventEmitter();
+  constructor(private navigateService: NavigateService){}
+  navigateTo(){
+    this.navigateService.navigateTo()
   }
 }

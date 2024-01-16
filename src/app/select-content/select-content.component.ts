@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { NavigateService } from '../navigate.service';
 
 @Component({
   selector: 'app-select-content',
@@ -7,7 +8,11 @@ import { Component } from '@angular/core';
 })
 export class SelectContentComponent {
  isInterest:boolean = false;
+ constructor(private navigationService:NavigateService){}
  viewInterests(){
   this.isInterest = true;
  }
+ navigateTo(){
+  this.navigationService.navigateTo()
+  }
 }

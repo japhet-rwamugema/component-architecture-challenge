@@ -10,7 +10,7 @@ const initialState:initialState = {
 }
 export const componentReducer = createReducer(initialState, on(getPage, (state)=>({
     ...state, 
-    page: state.page
+    page: state.page - 1
 })),
 on(setPage, (state)=>({
     ...state,

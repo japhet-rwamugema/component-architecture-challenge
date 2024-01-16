@@ -10,7 +10,7 @@
             </div>
             <div class="btn">
                 <app-button text="Upload photo" (onClickEvent)="upload()"></app-button>
-                <a routerLink="/select">skip</a>
+                <a (click)="navigateTo()">skip</a>
             </div>
         </div>
         <ng-template #uploadPhoto> 
@@ -21,7 +21,7 @@
                     <div class="img-container"><img src="../../assets/icons/profile.svg" alt="" routerLink="/select"></div>
                 </div>
                 <div class="btn">
-                    <app-button text="Continue" routerLink="/select"></app-button>
+                    <app-button text="Continue" (onClickEvent)="navigateTo()"></app-button>
                 </div>
             </div>
         </ng-template>
