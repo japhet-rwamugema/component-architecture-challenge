@@ -25,6 +25,7 @@ constructor(private viewContainerRef: ViewContainerRef){}
   animations:[]
 })
 export class AppComponent {
+  title:string = 'component architecture'
   @ViewChild(DynamicComponent, {static: true, read: ViewContainerRef}) appDynamicComponent!: ViewContainerRef
 pages = 0
 components = [AddPhotoComponent,SelectContentComponent, CompleteComponent ]
